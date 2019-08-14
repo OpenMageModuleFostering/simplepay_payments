@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>SimplePay_Payments</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/mit-license.html">MIT</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Accept payments using SimplePay.</summary>
+    <description>Accept payments using SimplePay.</description>
+    <notes>First stable release</notes>
+    <authors><author><name>SimplePay</name><user>simplepay</user><email>glenm@simplepay.com.au</email></author></authors>
+    <date>2013-11-06</date>
+    <time>04:53:35</time>
+    <contents><target name="magecommunity"><dir name="SimplePay"><dir name="Payments"><dir name="Block"><file name="Payment.php" hash="2649d5d95b0f2d78aeaef26b8295a92d"/></dir><dir name="Helper"><file name="Data.php" hash="f616e5862cc3f86da89e2650f2917aa1"/></dir><dir name="Model"><file name="Brands.php" hash="503fbf04f874089d1750c1e50171d0ab"/><file name="Config.php" hash="d709d80ae2074a1a1f08237f0a487321"/><file name="Payment.php" hash="83a36460d51d13e6b0699cc4716ce679"/></dir><dir name="controllers"><file name="PaymentController.php" hash="4393a5cdb47a60eb62742578bedd6c08"/></dir><dir name="etc"><file name="config.xml" hash="260a26eb6cf2519ddd4995d4a6b50931"/><file name="system.xml" hash="b7d39a5fb50628a6bb0629f1cf275634"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="simplepay.xml" hash="af565e90e944b87b4b4bc12e21d996ff"/></dir><dir name="template"><dir name="simplepay"><file name="pay.phtml" hash="598f185ca2c340a3d6087051317b19c5"/></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="SimplePay_Payments.xml" hash="f5776cc64ab1ef8e3dc093852dd0e3a1"/></dir></target><target name="mageskin"><dir name="frontend"><dir name="base"><dir name="default"><dir name="css"><file name="simplepay.css" hash="f198c7cf0e69b740a2eb2595f434832a"/></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php><package><name>Mage_Sales</name><channel>core</channel><min></min><max></max></package><package><name>Mage_Payment</name><channel>core</channel><min></min><max></max></package><extension><name>curl</name><min></min><max></max></extension></required></dependencies>
+</package>

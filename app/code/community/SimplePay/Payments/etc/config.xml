@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+       <SimplePay_Payments>
+          <version>1.0.0</version>
+       </SimplePay_Payments>
+    </modules>
+    <global>
+        <helpers>
+            <simplepay>
+                <class>SimplePay_Payments_Helper</class>
+            </simplepay>
+        </helpers>
+        <models>
+            <simplepay>
+                <class>SimplePay_Payments_Model</class>
+                <resourceModel>simplepay_resource</resourceModel>
+            </simplepay>
+            <simplepay_resource>
+                <class>SimplePay_Payments_Model_Resource</class>
+                <entities>
+                    <alias>
+                        <table>simplepay</table>
+                    </alias>
+                </entities>
+            </simplepay_resource>
+        </models>
+        <blocks>
+            <simplepay>
+                <class>SimplePay_Payments_Block</class>
+            </simplepay>
+        </blocks>
+    </global>
+
+    <default>
+        <payment_services>
+            <simplepay>
+                <title>SimplePay</title>
+                <model>simplepay/payment</model>
+                <payment_action>authorize</payment_action>
+                <enable_test_mode>1</enable_test_mode>
+            </simplepay>
+        </payment_services>
+        <payment>
+            <simplepay>
+                <active>0</active>
+                <title>Credit Card (SimplePay)</title>
+                <model>simplepay/payment</model>
+                <order_status>pending</order_status>
+                <availableBrands>MasterCard,Visa,American Express,Diners,JCB</availableBrands>
+            </simplepay>
+         </payment>
+    </default>
+
+    <frontend>
+        <layout>
+            <updates>
+                <simplepay>
+                    <file>simplepay.xml</file>
+                </simplepay>
+            </updates>
+        </layout>
+        <routers>
+            <simplepay>
+                <use>standard</use>
+                <args>
+                    <module>SimplePay_Payments</module>
+                    <frontName>simplepay</frontName>
+                </args>
+            </simplepay>
+        </routers>
+    </frontend>
+</config>

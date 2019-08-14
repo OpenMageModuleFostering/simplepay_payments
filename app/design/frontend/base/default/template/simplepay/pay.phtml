@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * Payment View
+ *
+ * @category View
+ * @package  SimplePay_Payments
+ * @author   SimplePay
+ */
+
+    // Retrieve the order
+    $orderId = $this->_getCheckout()->getLastRealOrderId();
+    $order = Mage::getModel('sales/order');
+    $order->loadByIncrementId($orderId);
+
+?>
+
+<div class="simplepay-payment-container">
+
+    <script type="text/javascript" src="<?php echo $this->getFormUrl($order->getStoreId()) ?>"></script>
+
+    <div class="simplepay-payment-text">
+        <p>Please pay for your order using the form below.</p>
+    </div>
+
+    <div class="simplepay-payment-form">
+
+        <form action="<?php echo $this->getResponseUrl() ?>"
+            id="<?php echo $this->getPaymentModel()->getData('paymentToken') ?>">
+            <?php echo $this->getAcceptedBrandsForForm() ?>
+        </form>
+
+    </div>
+
+    <div class="simplepay-payment-cancel">
+        <a href="<?php echo $this->getCancelUrl() ?>">Cancel</a>
+    </div>
+
+</div>
