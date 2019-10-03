@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/SimplePay_Payments",
+    "name": "OpenMageModuleFostering\/SimplePay_Payments",
     "type": "magento-module",
     "license": "MIT",
     "homepage": "",
     "description": "Accept payments using SimplePay.",
     "authors": [
-    {
-        "name": "SimplePay",
-        "email": "glenm@simplepay.com.au"
-    }
-],
+        {
+            "name": "SimplePay",
+            "email": "glenm@simplepay.com.au"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
